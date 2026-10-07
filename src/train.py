@@ -53,7 +53,7 @@ def main():
     cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=RANDOM_STATE)
     scoring = ["accuracy", "precision", "recall", "roc_auc"]
 
-    mlflow.set_tracking_uri((ROOT / "mlruns").as_uri())
+    mlflow.set_tracking_uri(f"sqlite:///{(ROOT / 'mlflow.db').as_posix()}")
     mlflow.set_experiment("heart-disease-classification")
 
     best_name, best_auc, best_pipeline = None, -1, None
@@ -97,7 +97,11 @@ def main():
 
             mlflow.log_artifact(str(cm_path))
             mlflow.log_artifact(str(roc_path))
-            mlflow.sklearn.log_model(best, name="model")
+            mlflow.sklearn.log_model(
+                best,
+                name="model",
+                serialization_format="cloudpickle",
+            )
 
             print(f"{name}: CV AUC={cv_res['test_roc_auc'].mean():.3f} "
                   f"| test AUC={test_auc:.3f} | params={search.best_params_}")
