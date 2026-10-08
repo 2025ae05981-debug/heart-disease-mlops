@@ -1,9 +1,8 @@
-﻿"""Train, tune, evaluate and track heart disease models with MLflow."""
+"""Train, tune, evaluate and track heart disease models with MLflow."""
 from pathlib import Path
 
 import joblib
 import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import mlflow
 import mlflow.sklearn
@@ -19,6 +18,7 @@ from sklearn.pipeline import Pipeline
 
 from src.preprocessing import (CATEGORICAL_FEATURES, NUMERIC_FEATURES, TARGET,
                                build_preprocessor)
+matplotlib.use("Agg")
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = ROOT / "data" / "heart_clean.csv"
