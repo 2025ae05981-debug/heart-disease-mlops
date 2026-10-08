@@ -1,0 +1,13 @@
+venv/
+test_env/
+.git/
+.github/
+notebooks/
+screenshots/
+data/
+mlflow.db
+mlartifacts/
+mlruns/
+__pycache__/
+.ipynb_checkpoints/
+tests/
