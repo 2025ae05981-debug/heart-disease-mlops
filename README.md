@@ -5,6 +5,7 @@ A reproducible ML pipeline that predicts heart disease risk from patient health 
 **Repository:** https://github.com/2025ae05981-debug/heart-disease-mlops
 **Demo video:** [Watch the pipeline demo](https://github.com/2025ae05981-debug/heart-disease-mlops/blob/main/video/pipeline_demo.mp4)
 **Course:** MLOps (AIMLCZG523), Assignment 01
+**Report:** [Final report (PDF)](report/MLOps_Assignment1_Report.pdf)
 
 ---
 
