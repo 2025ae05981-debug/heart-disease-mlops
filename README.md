@@ -3,7 +3,7 @@
 A reproducible ML pipeline that predicts heart disease risk from patient health data, served as a containerised FastAPI service on Kubernetes, with CI/CD, experiment tracking and monitoring.
 
 **Repository:** https://github.com/2025ae05981-debug/heart-disease-mlops
-**Demo video:** `<add your video link here>`
+**Demo video:** `[<add your video link here>](https://github.com/2025ae05981-debug/heart-disease-mlops/blob/main/video/pipeline_demo.mp4)`
 **Course:** MLOps (AIMLCZG523), Assignment 01
 
 ---
